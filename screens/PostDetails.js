@@ -19,10 +19,10 @@ const PostDetails = () =>{
                 'https://source.unsplash.com/random/200x200'
             }}
             />
-            <Text style={{fontSize:24, fontWeight:"bold"}}>
+            <Text style={{marginLeft:50,fontSize:20, fontWeight:"bold",}}>
                 Title : {route.params.post.title}
             </Text>
-            <Text style={{fontSize:24, fontWeight:"bold",color:"orange"}}>
+            <Text style={{marginTop:30,fontSize:20, fontWeight:"bold",color:"#9400D3"}}>
                 Body : {route.params.post.body}
             </Text>
         </View>
