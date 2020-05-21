@@ -1,8 +1,8 @@
 import React from 'react';
-import {View, Text} from 'react-native';
+import {View, Text,Image,} from 'react-native';
 import { useNavigation, useRoute} from '@react-navigation/native'
 
-const Profile = () =>{
+const GetPosts = () =>{
     const [postImg, setPostImg] = React.useState();
     const navigation = useNavigation();
     const route = useRoute();
@@ -14,4 +14,4 @@ const Profile = () =>{
         </View>
     )
 }
-export default Profile;
+export default GetPosts;

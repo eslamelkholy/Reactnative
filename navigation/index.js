@@ -6,6 +6,7 @@ import { createBottomTabNavigator } from '@react-navigation/bottom-tabs';
 import PostList from '../screens/PostList';
 import PostDetails from '../screens/PostDetails';
 import Profile from '../screens/Profile';
+import GetPosts from '../screens/GetPosts';
 
 const {Navigator: StackNavigator, Screen: StackScreen} = createStackNavigator();
 const {Navigator: TabNavigator, Screen: TabScreen} = createBottomTabNavigator();
@@ -37,6 +38,32 @@ const Home = () =>{
                     }
                 })}
             />
+            <StackScreen 
+                name="GET POSTS"
+                component={Profile}
+                options={({ navigation }) =>({
+                    headerTitle:"Redirect PostsList",
+                    
+                })}
+            />
+        </StackNavigator>
+    )
+}
+const MyProfile = () =>{
+    return(
+        <StackNavigator screenOptions={{
+            headerTitleAlign:"center",
+            headerTintColor:"white",
+            headerStyle:{backgroundColor:"#9400D3"}
+        }}>
+            <StackScreen 
+                name="GET POSTS"
+                component={Profile}
+                options={({ navigation }) =>({
+                    headerTitle:"Redirect PostsList",
+                    
+                })}
+            />
         </StackNavigator>
     )
 }
@@ -51,7 +78,7 @@ const RootNavigator = () =>{
                     tabStyle:{backgroundColor:"#9400D3",justifyContent:"center"}
                 }}>
                 <TabScreen name="Posts" component={Home} />
-                <TabScreen name="Profile" component={Profile} />
+                <TabScreen name="Profile" component={MyProfile} />
             </TabNavigator>
         
     </NavigationContainer>
